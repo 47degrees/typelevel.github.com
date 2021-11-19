@@ -15,7 +15,11 @@
           on {{ page.date | date: "%b %d, %Y" }}
         </p>
         <p class="blog-detail-tag">{{ page.category }}</p>
-        <img src="{{ site.baseurl }}{{ page.image }}" alt="">
+        {% if page.image contains ".jpg" or page.image contains ".png" %}
+           <img src="{{ site.baseurl }}{{ page.image }}" alt="">
+           {% else %}
+           <img src="{{ site.baseurl }}/img/blog/placeholder-typelevel.jpg" alt="">
+        {% endif %}
       </div>
       <div class="blog-detail-content">
       {{ content }}
