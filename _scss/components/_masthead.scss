@@ -39,7 +39,7 @@
 
       .masthead-image-path {
         position: absolute;
-        bottom: - $base-point-grid * 49;
+        bottom: -$base-point-grid * 49;
         left: $base-point-grid * 11;
         z-index: 8;
         opacity: 0.8;
@@ -51,7 +51,6 @@
         z-index: 4;
         width: 870px;
         height: 690px;
-
 
         img {
           width: 870px;
@@ -75,12 +74,40 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  h1  {
+  h1 {
     margin-bottom: $base-point-grid * 6;
   }
   p {
     max-width: $base-point-grid * 140;
     text-align: center;
     font-size: 1.125rem;
+  }
+
+  .masthead-social {
+    display: flex;
+    margin-top: $base-point-grid * 8;
+    li {
+      display: flex;
+      &:not(last-child) {
+        margin-right: $base-point-grid * 4;
+      }
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: $base-point-grid * 12;
+        height: $base-point-grid * 12;
+        font-size: 1.25rem;
+        color: $white;
+        background: url("../img/assets/background-social.svg") no-repeat center;
+        transition: $base-duration $base-timing;
+        transition-property: margin;
+
+        &:hover {
+          margin-top: - $base-point-grid * 2;
+          text-decoration: none;
+        }
+      }
+    }
   }
 }

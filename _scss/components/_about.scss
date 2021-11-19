@@ -68,6 +68,17 @@
   .about-list {
     @include col-2;
   }
+  #section-page {
+    .about-list {
+      .about-item {
+        &:nth-child(1),
+        &:nth-child(3),
+        &:nth-child(5) {
+          margin: 0;
+        }
+      }
+    }
+  }
 }
 @include bp(medium) {
   .about-list {
